@@ -1,81 +1,90 @@
 body {
     background-color: black;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 main::after {
     content: "";
-    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    background: rgb(255,255,255);
+background: linear-gradient(330deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.896796218487395) 78%);
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
 }
 .personagem {
     display: none;
 }
-.personagem.selecionado {
+main .personagem.selecionado {
     display: block;
 }
+
 .personagem img {
     width: 100%;
     height: 100vh;
-
     object-fit: cover;
 }
+
 .conteudo {
     color: white;
     position: fixed;
     top: 0;
-    left: 10vw;
+    left: 9vw;
     height: 100vh;
-    width: 26vw;
-    
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.conteudo .descricao {
-    line-height: 20px;
-    font-size: 20px
-}
-.conteudo .nome {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-.conteudo .logo {
-    background-image: url(../images/one-piece-logo.png);
-    background-size: cover;
-    width: 14vw;
-    height: 15vh;
-}
-.botoes {
-    background-color: rgba(0,0,0,0.3);
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 12vw;
-    height: 100vh;
+    width: 27vw;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
+    justify-content: center;
+    z-index: 1;
 }
-.botoes .botao img {
-    border-radius: 50%;
+
+.conteudo .nome {
+    font-size: 43px;
+    margin-bottom: 20px;
+    font-family: "Merriweather";
 }
-.botoes .botao {
+
+.conteudo .descricao {
+    font-size: 15px;
+    font-family: "Oswald";
+}
+.conteudo .logo {
     border: 0;
     background: none;
+    width: 15vw;
+    height: 12vh;
     cursor: pointer;
-    border-radius: 50%;
-    margin: 10px;
-    line-height: 0;
-    box-shadow: 0 0 20px rgb(255, 0, 0);
+    margin-bottom: 20px;
 }
-.botoes .botao.selecionado {
-    transform: scale(1.2);
-    box-shadow: 0 0 10px #2200ff;
+.conteudo .logo img {
+    width: 15vw;
+    height: 15vh;
+}
+.botoes {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 8vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botoes .botao {
+    background: none;
+    border: 0;
+    margin: 11px;
+    cursor: pointer;
+    transform: translateX(0);
+    transition: 1s;
+}
+.botao:hover {
+    transform: translateX(-50%);
+}
+.botao img {
+    border-radius: 50%;
+    height: 6vh;
 }
