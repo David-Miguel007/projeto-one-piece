@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul {
+    scrollbar-width: auto;
+    scrollbar-color: #010101 #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #010101;
+    border-radius: 10px;
+    border: 1px groove #ffffff;
+}
